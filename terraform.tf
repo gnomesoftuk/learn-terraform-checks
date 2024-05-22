@@ -3,7 +3,7 @@ terraform {
     organization = "Gnomesoft"
 
     workspaces {
-      name = "learn-terraform-checks"
+      name = "demo-terraform-checks"
     }
   }
 
