@@ -3,7 +3,7 @@ terraform {
     organization = "Gnomesoft"
 
     workspaces {
-      name = "demo-terraform-checks"
+      name = "learn-terraform-checks"
     }
   }
 
@@ -11,9 +11,9 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.4.0"
+      version = "~> 5"
     }
   }
 
-  required_version = ">= 1.5"
+  required_version = ">= 1.8"
 }

@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 
   default_tags {
     tags = {
@@ -14,7 +14,7 @@ data "aws_availability_zones" "available" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.77.0"
+  version = "~> 5.8"
 
   name = "main-vpc"
   cidr = "10.0.0.0/16"
@@ -31,7 +31,7 @@ data "aws_ami" "amazon-linux" {
 
   filter {
     name   = "name"
-    values = ["amzn-ami-hvm-*-x86_64-ebs"]
+    values = ["al2023-ami-2023.4.20240513.0-kernel-6.1-x86_64"]
   }
 }
 
