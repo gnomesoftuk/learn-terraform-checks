@@ -1,0 +1,19 @@
+# Status check to pass if the change didn't trigger a Terraform Cloud check
+
+name: Terraform Cloud/Gnomesoft/repo-id-3wvisF4S2nHGdJTc
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '!/infra/terraform'
+      
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Everything is OK
+        run: echo 'OK'
+
